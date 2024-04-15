@@ -1,0 +1,53 @@
+<div class="container h-100">
+  <nb-card
+    class="h-100"
+    [nbSpinner]="loading"
+    nbSpinnerStatus="primary"
+    nbSpinnerSize="large"
+  >
+    <div class="d-flex justify-content-center w-50" style="margin: auto">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="w-75">
+        <img src="/assets/images/logo.png" />
+        <div class="form-control-group pb-4">
+          <label class="label">Login:</label>
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            placeholder="Login"
+            fieldSize="large"
+            formControlName="Username"
+          />
+          <span class="text-danger" *ngIf="checkValidation('Login')"
+            >login is required</span
+          >
+        </div>
+
+        <div class="form-control-group pb-4">
+          <label class="label">Password:</label>
+          <input
+            type="password"
+            nbInput
+            fullWidth
+            placeholder="Password"
+            fieldSize="large"
+            formControlName="Password"
+          />
+          <span class="text-danger" *ngIf="checkValidation('Password')"
+            >password is required</span
+          >
+        </div>
+        <button
+          nbButton
+          status="primary"
+          fullWidth
+          size="large"
+          type="submit"
+          [disabled]="loginForm.invalid"
+        >
+          LOGIN
+        </button>
+      </form>
+    </div>
+  </nb-card>
+</div>

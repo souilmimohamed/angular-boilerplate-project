@@ -1,0 +1,28 @@
+.logo {
+  width: 100px;
+}
+
+::ng-deep .nb-theme-default nb-user .user-name {
+  color: #fff;
+}
+
+::ng-deep .nb-theme-default nb-layout-header {
+  background-color: #303750;
+}
+::ng-deep .nb-theme-default nb-layout-header nav {
+  height: 3rem;
+}
+::ng-deep
+  .nb-theme-default
+  nb-layout
+  .layout
+  .layout-container
+  .content
+  nb-layout-footer
+  nav {
+  height: 3rem;
+}
+.nb-theme-default .options-list:not(.full-width),
+.nb-theme-default nb-select.size-medium:not(.full-width) {
+  max-width: 10rem;
+}
